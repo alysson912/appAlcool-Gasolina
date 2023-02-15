@@ -92,7 +92,7 @@ class CalculatorScreen: UIView {
         btn.setTitleColor(.white, for: .normal)
         btn.clipsToBounds = true
         btn.layer.cornerRadius =  8
-        btn.backgroundColor = UIColor(red: 128/255, green: 128/255, blue: 128/255, alpha: 1.0)
+        btn.backgroundColor = UIColor(red: 230/255, green: 0/255, blue: 127/255, alpha: 1.0)
         btn.addTarget(self, action: #selector(tappedCalculateButton), for:  .touchUpInside)
         return btn
     }()
