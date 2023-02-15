@@ -18,6 +18,14 @@ class CalculatorScreen: UIView {
         return image
     }()
     
+    lazy var backButton: UIButton = {
+        let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setBackgroundImage(UIImage( named: "Botão Back"), for: .normal)
+        // btn.addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControl.Event#>)
+        return btn
+    }()
+    
     lazy var logoAppImageView: UIImageView = {
        let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -62,13 +70,30 @@ class CalculatorScreen: UIView {
         return btn
     }()
     
+    lazy var calculateButton: UIButton = {
+        let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setTitle("Calcular", for: .normal)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        btn.setTitleColor(.white, for: .normal)
+        btn.clipsToBounds = true
+        btn.layer.cornerRadius =  8
+        btn.backgroundColor = UIColor(red: 128/255, green: 128/255, blue: 128/255, alpha: 1.0)
+       // btn.addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControl.Event#>)
+        return btn
+    }()
+    
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         addSubview(backGroundImage)
+        addSubview(backButton)
         addSubview(logoAppImageView)
         addSubview(ethanolPriceTextField)
         addSubview(gasPriceTextField)
+        addSubview(calculateButton)
         configConstraints()
     }
     
@@ -84,17 +109,25 @@ class CalculatorScreen: UIView {
             backGroundImage.trailingAnchor.constraint(equalTo: trailingAnchor),
             backGroundImage.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            logoAppImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 60),
+            backButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            
+            logoAppImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 150),
             logoAppImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             logoAppImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             
-            ethanolPriceTextField.topAnchor.constraint(equalTo: logoAppImageView.bottomAnchor, constant: 200),
+            ethanolPriceTextField.topAnchor.constraint(equalTo: logoAppImageView.bottomAnchor, constant: 134),
             ethanolPriceTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             ethanolPriceTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             
             gasPriceTextField.topAnchor.constraint(equalTo: ethanolPriceTextField.bottomAnchor, constant:  16),
             gasPriceTextField.leadingAnchor.constraint(equalTo: ethanolPriceTextField.leadingAnchor),
             gasPriceTextField.trailingAnchor.constraint(equalTo: ethanolPriceTextField.trailingAnchor),
+            
+            calculateButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant:  -135),
+            calculateButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 60),
+            calculateButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -60),
+            calculateButton.heightAnchor.constraint(equalToConstant: 44)
         ])
     }
 }
