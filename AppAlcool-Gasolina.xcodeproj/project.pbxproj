@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38132266299D42A800B9C071 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38132265299D42A800B9C071 /* Alert.swift */; };
 		38D81B3E299C080C00D1741A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D81B3D299C080C00D1741A /* AppDelegate.swift */; };
 		38D81B40299C080C00D1741A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D81B3F299C080C00D1741A /* SceneDelegate.swift */; };
 		38D81B42299C080C00D1741A /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D81B41299C080C00D1741A /* HomeVC.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38132265299D42A800B9C071 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		38D81B3A299C080C00D1741A /* AppAlcool-Gasolina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppAlcool-Gasolina.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D81B3D299C080C00D1741A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38D81B3F299C080C00D1741A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38132264299D429200B9C071 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				38132265299D42A800B9C071 /* Alert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		38D81B31299C080C00D1741A = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 		38D81B3C299C080C00D1741A /* AppAlcool-Gasolina */ = {
 			isa = PBXGroup;
 			children = (
+				38132264299D429200B9C071 /* Alert */,
 				38D81B3D299C080C00D1741A /* AppDelegate.swift */,
 				38D81B3F299C080C00D1741A /* SceneDelegate.swift */,
 				38D81B78299C4C9100D1741A /* src */,
@@ -173,6 +184,7 @@
 				38D81B3E299C080C00D1741A /* AppDelegate.swift in Sources */,
 				38D81B40299C080C00D1741A /* SceneDelegate.swift in Sources */,
 				38D81B77299C42EC00D1741A /* CalculatorScreen.swift in Sources */,
+				38132266299D42A800B9C071 /* Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
