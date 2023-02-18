@@ -59,6 +59,7 @@ class CalculatorScreen: UIView {
         tf.placeholder = "Preço do Álcool"
         tf.textColor = .darkGray
         tf.isSecureTextEntry = false
+        tf.addDoneButtonOnKeyboard()
         return tf
     }()
     
@@ -72,6 +73,7 @@ class CalculatorScreen: UIView {
         tf.placeholder = "Preço da Gasolina"
         tf.textColor = .darkGray
         tf.isSecureTextEntry = false
+        tf.addDoneButtonOnKeyboard()
         return tf
     }()
     

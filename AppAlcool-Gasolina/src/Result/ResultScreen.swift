@@ -7,8 +7,19 @@
 
 import UIKit
 
+protocol ResultScreenDelegate: AnyObject {
+    func tappedBackButton()
+    func tappedCalculateButton()
+}
+
 class ResultScreen: UIView {
 
+    private weak var delegate: ResultScreenDelegate?
+    
+    public func delegate(delegate: ResultScreenDelegate?){
+        self.delegate = delegate
+    }
+    
     lazy var backgroundImageView: UIImageView = {
        let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -22,9 +33,13 @@ class ResultScreen: UIView {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setBackgroundImage(UIImage( named: "Botão Back"), for: .normal)
-        //btn.addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControl.Event#>)
+        btn.addTarget(self, action: #selector(tappedBackButton), for: .touchUpInside)
         return btn
     }()
+    
+    @objc func tappedBackButton(){
+        delegate?.tappedBackButton()
+    }
     
     lazy var logoAppeImageView: UIImageView = {
        let image = UIImageView()
@@ -55,15 +70,20 @@ class ResultScreen: UIView {
     lazy var calculateButton: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.setTitle("Calcular", for: .normal)
+        btn.setTitle("Calcular Novamente", for: .normal)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         btn.setTitleColor(.white, for: .normal)
         btn.clipsToBounds = true
         btn.layer.cornerRadius =  8
         btn.backgroundColor = UIColor(red: 230/255, green: 0/255, blue: 127/255, alpha: 1.0)
-        // btn.addTarget(<#T##target: Any?##Any?#>, action: <#T##Selector#>, for: <#T##UIControl.Event#>)
+        btn.addTarget(self, action: #selector(tappedCalculateButton), for: .touchUpInside)
         return btn
     }()
+    
+    @objc func tappedCalculateButton() {
+        delegate?.tappedCalculateButton()
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(backgroundImageView)

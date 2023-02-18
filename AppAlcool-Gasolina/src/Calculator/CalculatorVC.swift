@@ -19,6 +19,7 @@ class CalculatorVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         alert = Alert(controller: self)
         screen?.delegate(delegate: self) // assinando protocolo 
         
@@ -43,24 +44,23 @@ class CalculatorVC: UIViewController {
 }
 extension CalculatorVC: CalculatorScreenDelegate {
     func tappedCalculateButton() {
-        let vc = ResultVC()
-        navigationController?.pushViewController(vc, animated: true)
-//        if validateTextFields(){
-//
-//        let formatter = NumberFormatter()
-//        formatter.numberStyle = .decimal
-//
-//        let ethanolPrice: Double = ( formatter.number(from: screen?.ethanolPriceTextField.text ?? "0.0") as? Double) ?? 0.0
-//        let gasPrice: Double = ( formatter.number(from: screen?.gasPriceTextField.text ?? "0.0") as? Double) ?? 0.0
-//
-//            let vc = ResultVC()
-//        if ethanolPrice / gasPrice > 0.7 {
-//
-//        }else {
-//            print("melhor utilizar alcool")
-//        }
-//            navigationController?.pushViewController(vc, animated: true)
-//    }
+        
+       
+        if validateTextFields(){
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+
+        let ethanolPrice: Double = ( formatter.number(from: screen?.ethanolPriceTextField.text ?? "0.0") as? Double) ?? 0.0
+        let gasPrice: Double = ( formatter.number(from: screen?.gasPriceTextField.text ?? "0.0") as? Double) ?? 0.0
+
+            var vc: ResultVC?
+        if ethanolPrice / gasPrice > 0.7 {
+            vc = ResultVC(bestFuel: .gas)
+        }else {
+            vc = ResultVC(bestFuel: .ethanol)
+        }
+            navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+    }
 }
     
     func tappedBackButton() {

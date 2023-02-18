@@ -10,6 +10,8 @@
 		38132266299D42A800B9C071 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38132265299D42A800B9C071 /* Alert.swift */; };
 		38132269299D4B2C00B9C071 /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38132268299D4B2C00B9C071 /* ResultVC.swift */; };
 		3813226B299D4B5400B9C071 /* ResultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3813226A299D4B5400B9C071 /* ResultScreen.swift */; };
+		38458D0929A144C4005E804B /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38458D0829A144C4005E804B /* UITextField+Extension.swift */; };
+		38458D0B29A147B2005E804B /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38458D0A29A147B2005E804B /* UIViewController+Extension.swift */; };
 		38D81B3E299C080C00D1741A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D81B3D299C080C00D1741A /* AppDelegate.swift */; };
 		38D81B40299C080C00D1741A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D81B3F299C080C00D1741A /* SceneDelegate.swift */; };
 		38D81B42299C080C00D1741A /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D81B41299C080C00D1741A /* HomeVC.swift */; };
@@ -24,6 +26,8 @@
 		38132265299D42A800B9C071 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		38132268299D4B2C00B9C071 /* ResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
 		3813226A299D4B5400B9C071 /* ResultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultScreen.swift; sourceTree = "<group>"; };
+		38458D0829A144C4005E804B /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		38458D0A29A147B2005E804B /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		38D81B3A299C080C00D1741A /* AppAlcool-Gasolina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppAlcool-Gasolina.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D81B3D299C080C00D1741A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38D81B3F299C080C00D1741A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,15 @@
 			path = Result;
 			sourceTree = "<group>";
 		};
+		38458D0729A144A3005E804B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				38458D0829A144C4005E804B /* UITextField+Extension.swift */,
+				38458D0A29A147B2005E804B /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		38D81B31299C080C00D1741A = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +96,7 @@
 		38D81B3C299C080C00D1741A /* AppAlcool-Gasolina */ = {
 			isa = PBXGroup;
 			children = (
+				38458D0729A144A3005E804B /* Extension */,
 				38D81B3D299C080C00D1741A /* AppDelegate.swift */,
 				38D81B3F299C080C00D1741A /* SceneDelegate.swift */,
 				38D81B78299C4C9100D1741A /* src */,
@@ -193,10 +207,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				38D81B75299C41F600D1741A /* CalculatorVC.swift in Sources */,
+				38458D0B29A147B2005E804B /* UIViewController+Extension.swift in Sources */,
 				38132269299D4B2C00B9C071 /* ResultVC.swift in Sources */,
 				38D81B55299C0AFE00D1741A /* HomeScreen.swift in Sources */,
 				38D81B42299C080C00D1741A /* HomeVC.swift in Sources */,
 				3813226B299D4B5400B9C071 /* ResultScreen.swift in Sources */,
+				38458D0929A144C4005E804B /* UITextField+Extension.swift in Sources */,
 				38D81B3E299C080C00D1741A /* AppDelegate.swift in Sources */,
 				38D81B40299C080C00D1741A /* SceneDelegate.swift in Sources */,
 				38D81B77299C42EC00D1741A /* CalculatorScreen.swift in Sources */,
